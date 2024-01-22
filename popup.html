@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>KROS Request logger</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .trim-url {
+            overflow-wrap: break-word;
+            word-wrap: break-word;
+            white-space: normal;
+            display: block;
+            /* Zabezpečí, že sa správanie aplikuje konzistentne */
+        }
+
+
+        table {
+            width: 100%;
+            table-layout: auto;
+            /* Meníme z 'fixed' na 'auto', aby sa šírky stĺpcov prispôsobili obsahu */
+        }
+
+        table,
+        th,
+        td {
+            word-wrap: break-word;
+            /* Zabezpečí, že všetok text v tabuľke sa bude zalamovať */
+        }
+
+        .content {
+            width: 100%;
+            height: 100%;
+            margin: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h1 class="my-3">KROS Request logger</h1>
+        <input type="text" id="filterInput" class="form-control mb-3" placeholder="Filter requests...">
+        <table id="requestTable" class="table">
+            <thead class="thead-light">
+                <tr>
+                    <th>Request URL</th>
+                    <th>Count</th>
+                    <th>Average Duration</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sem sa budú dynamicky vkladať údaje -->
+            </tbody>
+        </table>
+        <button id="clearButton" class="btn btn-danger">Clear Results</button>
+        <button id="exportButton" class="btn btn-success">Export to CSV</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>

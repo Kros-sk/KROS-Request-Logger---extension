@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "KROS Request Logger",
+  "version": "1.2",
+  "permissions": [
+    "webRequest",
+    "tabs",
+    "storage"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    
+  }
+}
